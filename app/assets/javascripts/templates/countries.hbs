@@ -1,0 +1,13 @@
+<div class="col-md-3">
+  <div class="well sidebar-nav">
+    <ul class="nav nav-list">
+      <li class="nav-header">Countries</li>
+      {{#each model}}
+        <li>{{title}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<div class="col-md-9">
+  {{outlet}}
+</div>
