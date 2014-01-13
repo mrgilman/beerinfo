@@ -3,7 +3,9 @@
     <ul class="nav nav-list">
       <li class="nav-header">Countries</li>
       {{#each model}}
-        <li>{{title}}</li>
+      <li>
+        {{#link-to "country" this}}{{title}}{{/link-to}}
+      </li>
       {{/each}}
     </ul>
   </div>
