@@ -1,1 +1,11 @@
 <h1>{{title}}</h1>
+
+<ul class='unstyled list-striped'>
+  {{#each brewery in breweries}}
+    <li>
+      {{#link-to "brewery" brewery}}
+        <h3>{{brewery.title}}</h3>
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>
