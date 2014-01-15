@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Beerinfo::Application.config.secret_token = '1b921eb59114ff9833b4c61bf952ff024ed00b717fae655fe6d42d683223b24448e93afe1991bda2ca145bf0ca1c3dbe1fc2a855ee3a7b314475f3d01d180db3'
+Beerdb::Application.config.secret_token = '0113b37f47d14e03c6549a5b4f31b654da1bf17a31a588c737900f516ec709aeb8a87f7ea0747151d62b5e03a2418b1f2e47979b57cb4a0f7a5f7b7dfe76913c'

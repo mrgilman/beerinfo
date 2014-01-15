@@ -1,3 +1,3 @@
 App.CountriesRoute = Ember.Route.extend
   model: ->
-    @store.find("country")
+    App.Country.find()

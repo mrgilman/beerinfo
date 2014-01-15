@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Beerinfo::Application.load_tasks
+Beerdb::Application.load_tasks

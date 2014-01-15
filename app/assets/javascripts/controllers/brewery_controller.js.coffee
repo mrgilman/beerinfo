@@ -6,22 +6,17 @@ App.BreweryController = Ember.ObjectController.extend
     @set("isEditing", true)
 
   save: ->
-    brewery = @get('model')
-    brewery.save()
+    @store.commit()
     @set("isEditing", false)
 
   addBeer: (attrs) ->
-    brewery = @get('model')
-    country = brewery.get("country")
-    beer = {
-      title: attrs.title
-      abv: attrs.abv
-      brewery: brewery
-      country: country
-    }
+    attrs = $.extend(attrs, {
+      brewery_id: @content.get("id")
+      country_id: @content.get("country_id")
+    })
     if !attrs.title? or attrs.title.trim() is ""
       alert "Please give your beer a name!"
     else
-      beer = @store.createRecord('beer', beer)
+      beer = App.Beer.createRecord(attrs)
       @content.get("beers").pushObject(beer)
-      beer.save()
+      @get("store").commit()

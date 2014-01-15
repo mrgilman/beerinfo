@@ -1,4 +1,4 @@
-Beerinfo::Application.routes.draw do
+Beerdb::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do

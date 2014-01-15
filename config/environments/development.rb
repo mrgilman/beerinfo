@@ -1,4 +1,4 @@
-Beerinfo::Application.configure do
+Beerdb::Application.configure do
   config.ember.variant = :development
   config.cache_classes = false
   config.whiny_nils = true

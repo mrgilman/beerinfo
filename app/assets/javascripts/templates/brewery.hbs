@@ -1,10 +1,10 @@
-<div class="col-md-12">
+<div class='span12'>
   <h1>{{displayName}}</h1>
   <h3>
     {{cityState}}
-    {{#link-to "country" country}}
+    {{#linkTo "country" country}}
       {{country.title}}
-    {{/link-to}}
+    {{/linkTo}}
   </h3>
   {{#if isEditing}}
     {{partial "brewery/form"}}

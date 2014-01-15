@@ -1,15 +1,16 @@
-<div class="col-md-3">
+<div class="span3">
   <div class="well sidebar-nav">
     <ul class="nav nav-list">
       <li class="nav-header">Countries</li>
       {{#each model}}
-      <li>
-        {{#link-to "country" this}}{{title}}{{/link-to}}
-      </li>
+        <li>
+          {{#linkTo "country" this}}{{title}}{{/linkTo}}
+        </li>
       {{/each}}
     </ul>
   </div>
 </div>
-<div class="col-md-9">
+<div class="span9">
   {{outlet}}
+
 </div>

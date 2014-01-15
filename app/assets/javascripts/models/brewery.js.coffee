@@ -3,9 +3,9 @@ App.Brewery = DS.Model.extend
   address: DS.attr("string")
   synonyms: DS.attr("string")
   beer_ids: DS.attr("string")
-  beers: DS.hasMany("beer", async: true)
   country_id: DS.attr("number")
-  country: DS.belongsTo("country")
+  country: DS.belongsTo("App.Country")
+  beers: DS.hasMany("App.Beer")
 
   cityState: (->
     if @get("address")?
