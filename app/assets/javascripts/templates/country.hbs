@@ -6,6 +6,9 @@
       {{#link-to "brewery" brewery}}
         <h3>{{brewery.title}}</h3>
       {{/link-to}}
+      {{#if brewery.cityState}}
+        <h4>{{brewery.cityState}}</h4>
+      {{/if}}
     </li>
   {{/each}}
 </ul>

@@ -1,0 +1,34 @@
+<div class="col-md-12">
+  <h1>{{displayName}}</h1>
+  <h3>
+    {{cityState}}
+    {{#link-to "country" country}}
+      {{country.title}}
+    {{/link-to}}
+  </h3>
+  {{#if synonyms}}
+    <p>
+      Synonyms: {{synonyms}}
+    </p>
+  {{/if}}
+  {{#if address}}
+    <p>
+      Address: {{address}}
+    </p>
+  {{/if}}
+  <p>
+    Beer Count: {{beerCount}}
+  </p>
+  <button class='btn btn-primary btn-mini' {{action "edit"}}>Edit</button>
+
+  <hr>
+
+  <h3>Beers</h3>
+  <ul class='unstyled list-striped'>
+    {{#each beer in beers}}
+      <li>
+        <strong>{{beer.title}}</strong> <span class='pull-right'>{{beer.abv}}%</span>
+      </li>
+    {{/each}}
+  </ul>
+</div>
