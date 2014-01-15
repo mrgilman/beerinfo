@@ -17,6 +17,7 @@ gem 'ember-rails'
 gem 'bootstrap-sass'
 
 group :development do
+  gem 'beerdb'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'

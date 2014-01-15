@@ -6,9 +6,9 @@ class Beer
 
   validates :title, presence: true
 
-  before_create do
+  before_validation do
     if self.key.blank?
-      self.key = self.title.parameterize
+      self.key = self.title.parameterize.gsub(/-/,'')
     end
   end
 
