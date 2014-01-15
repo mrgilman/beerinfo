@@ -8,3 +8,13 @@
 #= require_tree ./routes
 #= require ./router
 #= require_self
+
+App.ApplicationSerializer = DS.RESTSerializer.extend(keyForRelationship: (rel, kind) ->
+  if kind is "belongsTo"
+    underscored = rel.underscore()
+    underscored + "_id"
+  else
+    singular = rel.singularize()
+    underscored = singular.underscore()
+    underscored + "_ids"
+)
